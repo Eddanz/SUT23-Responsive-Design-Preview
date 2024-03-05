@@ -22,6 +22,7 @@ body{
 }
 
 .heading{
+    font-size: 6rem;
     margin: 2rem;
     padding-top: 6rem;
     display: inline-block;
@@ -76,11 +77,12 @@ body{
     padding: 1rem 2rem;
     top: 0; left: 0;
     z-index: 100;
+    position: fixed;
 }
 
 .header .logo{
     font-size: 2.5rem;
-    color: #fff;
+    color: #ccc;
 }
 
 .header .logo i{
@@ -100,11 +102,11 @@ body{
 
 .header .navbar ul li a{
     font-size: 2rem;
-    color: #fff;
+    color: #ccc;
 }
 
 .header .navbar ul li a:hover{
-    color: #ccc;
+    color: #999;
 }
 
 .header .fa-bars{
@@ -244,5 +246,293 @@ body{
 }
 
 .about .row .content p{
-    
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0;
+}
+
+.about::before, .about::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    opacity: .2;
+    border-radius: 50%;
+}
+
+.about::before{
+    height: 60rem;
+    width: 60rem;
+    background: #ccc;
+    bottom: -10rem;
+    left: -10rem;
+}
+
+.about::after{
+    height: 60rem;
+    width: 60rem;
+    background: var(--color);
+    top: -10rem;
+    right: -10rem;
+}
+
+.services{
+    width: 100vw;
+    text-align: center;
+}
+
+.services .row{
+    margin: 2rem 0;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services .row .image img{
+    width: 50vw;
+    height: 50vh;
+}
+
+.services .row .content{
+    text-align: left;
+    padding: 0 3rem;
+}
+
+.services .row .content h3{
+    font-size: 3rem;
+    color: var(--color);
+}
+
+.services .row .content p{
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0;
+}
+
+.team{
+    min-height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background-color: #222;
+}
+
+.team .heading{
+    color: #fff;
+}
+
+.team .heading::before, .team .heading::after{
+    border-color: #fff;
+}
+
+.team .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team .row .card{
+    height: 35rem;
+    width: 25rem;
+    background: #fff;
+    text-align: center;
+    margin: 7rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.team .row .card .image{
+    margin: 1rem 0;
+    padding-top: 4rem;
+}
+
+.team .row .card .image img{
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    border: .5rem solid #fff;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .3);
+}
+
+.team .row .card .info h3{
+    font-size: 2rem;
+    color: #333;
+}
+
+.team .row .card .info span{
+    font-size: 1.8rem;
+    color: var(--color)
+}
+
+.team .row .card .info .icon a{
+    margin-top: 4rem;
+    padding: 0 1rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.team .row .card .info .icon a:hover{
+    color: var(--color)
+}
+
+.contact{
+    min-height: 100vh;
+    min-width: 100vw;
+    text-align: center;
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .row .image img{
+    height: 70vh;
+    width: 50vw;
+
+}
+
+.contact .row .form-container{
+    width: 50%;
+    text-align: left;
+    padding: 0 5rem;
+}
+
+.contact .row .form-container .input-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .row .form-container input, textarea{
+    outline: none;
+    border: none;
+    height: 4rem;
+    background: none;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, .3);
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.contact .row .form-container input[type="text"]{
+    width: 49.5%;
+}
+
+.contact .row .form-container input[type="email"]{
+    width: 100%;
+}
+
+.contact .row .form-container textarea{
+    width: 100%;
+    height: 20rem;
+    padding: 1rem;
+    resize: none;
+}
+
+.contact .row .form-container input[type="submit"]{
+    background-color: var(--color);
+    color: #fff;
+    cursor: pointer;
+    height: 4rem;
+    width: 10rem;
+}
+
+.contact .row .form-container input[type="submit"]:hover{
+    letter-spacing: .1rem;
+    opacity: .8;
+}
+
+.faq{
+    min-height: 100vh;
+    min-width: 100vw;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.faq .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+.faq .row .faq-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq .row .image img{
+    height: 50vh;
+    width: 50vw;
+}
+
+.faq .row .according-container{
+    width: 50%;
+    text-align: left;
+}
+
+.faq .row .according-container .according .according-header{
+    background-color: var(--color);
+    margin: 1rem 0;
+    box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.faq .row .according-container .according .according-header span{
+    display: inline-block;
+    text-align: center;
+    height: 4rem;
+    width: 5rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    background: #fff;
+    color: #333;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.faq .row .according-container .according .according-header h3{
+    display: inline;
+    color: #fff;
+    font-weight: 400;
+    padding-left: .5rem; 
+    font-size: 1.5rem;
+}
+
+.faq .row .according-container .according .according-body{
+    padding: 1rem;
+    color: #444;
+    box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .3);
+    font-size: 1.3rem;
+    display: none;
+}
+
+.faq .row .according-container .according:nth-child(1) .according-body{
+    display: block;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    background-color: var(--color);
+}
+
+.footer h2{
+    color: #fff;
+    letter-spacing: .1rem;
+    font-weight: 400;
+}
+
+.footer .icon a{
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 0 1rem;
 }
